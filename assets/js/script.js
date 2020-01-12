@@ -75,17 +75,23 @@ function getWeather() {
         console.log(precipitation);
         var iconurl = "http://openweathermap.org/img/w/" + precipitation + ".png";
         $('#wicon').attr('src', iconurl);
-        uvURL = "http://api.openweathermap.org/data/2.5/uvi?appid=daae374587aecd4318cddf643fac9582&lat=" + lat + "&lon=" + lon;
+        var uvURL = "http://api.openweathermap.org/data/2.5/uvi?appid=daae374587aecd4318cddf643fac9582&lat=" + lat + "&lon=" + lon;
         $.ajax({
             url: uvURL,
             method: "GET"
         }).then(function(uvReturn) {
         console.log(uvReturn)
         newWeatherUV.text("UV Index: " + uvReturn.value)
-
+        
     });
     });
-
+    var fiveDayURL = "https://samples.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=daae374587aecd4318cddf643fac9582";
+        $.ajax({
+            url: fiveDayURL,
+            method: "GET"
+        }).then(function(fiveDayReturn) {
+            console.log(fiveDayReturn)
+        });
    
 
 
