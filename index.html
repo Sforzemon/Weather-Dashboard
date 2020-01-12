@@ -21,7 +21,8 @@
     <!-- Start of sidebar -->
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-sm-3 col-md-2 d-sm-block bg-light sidebar">
+        
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
           <div class="sidebar-sticky" id="crapSideBar">
             <h6 class="sidebar-heading d-flex justify-content-center align-items-center mt-4 mb-1">
               <span class="text-center d-none d-sm-block">Recent Searches</span>
@@ -30,22 +31,36 @@
             </ul>
           </div>
         </nav>
-      </div>
-    </div>
     <!-- Start of main body for display -->
-    <div class="container-fluid main-body">
-      <div class="row" id="oneDayWeather">
-        <div class="col-sm-9 col md 10 d-block">
-
+        <div class="d-block col-12 col-sm-9 col-md-10 w-100 pl-5 mt-3">
+          <div class="main-body">
+            <div class="row">
+              <div class="row w-100 pl-3 pt-3" id="oneDayWeather">
+                <h1 class="w-100" id="cityName">City Name</h1>
+                <div id="weatherDetails"></div>
+                <div id="icon" class="mx-auto"><img id="wicon"></div>
+                </div>
+                
+              </div>
+                
+              
+      
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- Section for 5 day forcast -->
+      <!-- Section for 5 day forcast -->
     <div class="container-fluid">
       <div class="row" id="fiveDayWeather">
 
       </div>
     </div>
+      
+      </div>
+    </div>
+   
+    
+    
 
 
     <!-- Optional JavaScript -->

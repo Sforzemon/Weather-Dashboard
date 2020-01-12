@@ -22,6 +22,10 @@
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
 
+#oneDayWeather {
+  border: solid 1px lightskyblue
+}
+
 .sidebar .nav-link {
     font-weight: 500;
     color: #333;
