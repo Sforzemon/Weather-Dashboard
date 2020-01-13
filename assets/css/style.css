@@ -21,11 +21,12 @@
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
-
+.card-body {
+  border: solid 1px lightskyblue
+}
 #oneDayWeather {
   border: solid 1px lightskyblue
 }
-
 .sidebar .nav-link {
     font-weight: 500;
     color: #333;
