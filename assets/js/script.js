@@ -51,9 +51,9 @@ function getWeather() {
         var lon = (response.coord.lon);
         var lat = (response.coord.lat);
         var precipitation = (response.weather[0].icon);
-        var iconurl = "http://openweathermap.org/img/w/" + precipitation + ".png";
+        var iconurl = "https://openweathermap.org/img/w/" + precipitation + ".png";
         $('#wicon').attr('src', iconurl);
-        var uvURL = "http://api.openweathermap.org/data/2.5/uvi?appid=daae374587aecd4318cddf643fac9582&lat=" + lat + "&lon=" + lon;
+        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=daae374587aecd4318cddf643fac9582&lat=" + lat + "&lon=" + lon;
         $.ajax({
             url: uvURL,
             method: "GET"
@@ -95,7 +95,7 @@ function getWeather() {
                 newCardBody.append(cardHeader, fiveDayImage, cardList);
                 cardList.append(cardTextTemp, cardTextHumidity);
                 var fiveDayPrecipitation = (fiveDayReturn.list[j].weather[0].icon);
-                var fiveDayiconurl = "http://openweathermap.org/img/w/" + fiveDayPrecipitation + ".png";
+                var fiveDayiconurl = "https://openweathermap.org/img/w/" + fiveDayPrecipitation + ".png";
                 $('#fiveDaywicon' + [j]).attr('src', fiveDayiconurl);
             }
         });
